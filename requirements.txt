@@ -1,0 +1,13 @@
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional: For web interface (Phase 2)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Optional: For Docker support
+docker>=6.1.0
+
+# Optional: For advanced logging
+rich>=13.0.0

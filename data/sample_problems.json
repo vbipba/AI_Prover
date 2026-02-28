@@ -1,0 +1,52 @@
+{
+  "basic_arithmetic": {
+    "problem": "Prove that the sum of two even numbers is even.",
+    "expected_lean": "theorem even_add_even (a b : ℕ) (ha : Even a) (hb : Even b) : Even (a + b) :=",
+    "difficulty": "beginner"
+  },
+  "basic_algebra": {
+    "problem": "Prove that for any integer n, n^2 + n is even.",
+    "expected_lean": "theorem square_plus_self_even (n : ℤ) : Even (n^2 + n) :=",
+    "difficulty": "beginner"
+  },
+  "basic_number_theory": {
+    "problem": "Prove that if p is a prime number greater than 3, then p^2 - 1 is divisible by 24.",
+    "expected_lean": "theorem prime_square_minus_one_divisible_by_24 {p : ℕ} (hp : Nat.Prime p) (hp3 : 3 < p) : 24 ∣ p^2 - 1 :=",
+    "difficulty": "intermediate"
+  },
+  "basic_set_theory": {
+    "problem": "Prove that the union of two finite sets is finite.",
+    "expected_lean": "theorem finite_union {α : Type} {s t : Set α} (hs : s.Finite) (ht : t.Finite) : (s ∪ t).Finite :=",
+    "difficulty": "beginner"
+  },
+  "basic_calculus": {
+    "problem": "Prove that the derivative of x^n is n*x^(n-1) for positive integers n.",
+    "expected_lean": "theorem derivative_power_rule {n : ℕ} (hn : 0 < n) : deriv (fun x : ℝ => x ^ n) = fun x : ℝ => n * x ^ (n - 1) :=",
+    "difficulty": "intermediate"
+  },
+  "basic_geometry": {
+    "problem": "Prove that the sum of the interior angles of a triangle is 180 degrees.",
+    "expected_lean": "theorem triangle_angle_sum {A B C : Point} (hnd : ¬Collinear [A, B, C]) : angle A B C + angle B C A + angle C A B = Real.pi :=",
+    "difficulty": "beginner"
+  },
+  "basic_logic": {
+    "problem": "Prove that (P → Q) → ((Q → R) → (P → R)) is a tautology.",
+    "expected_lean": "theorem hypothetical_syllogism {P Q R : Prop} : (P → Q) → ((Q → R) → (P → R)) :=",
+    "difficulty": "beginner"
+  },
+  "basic_induction": {
+    "problem": "Prove by induction that 1 + 2 + ... + n = n(n+1)/2 for all positive integers n.",
+    "expected_lean": "theorem sum_of_first_n_naturals (n : ℕ) : (∑ i in Finset.range (n + 1), i) = n * (n + 1) / 2 :=",
+    "difficulty": "beginner"
+  },
+  "basic_inequalities": {
+    "problem": "Prove the AM-GM inequality for two positive real numbers: (a + b)/2 ≥ √(ab).",
+    "expected_lean": "theorem am_gm_two_numbers {a b : ℝ} (ha : 0 < a) (hb : 0 < b) : (a + b) / 2 ≥ √(a * b) :=",
+    "difficulty": "intermediate"
+  },
+  "basic_combinatorics": {
+    "problem": "Prove that the number of subsets of a set with n elements is 2^n.",
+    "expected_lean": "theorem powerset_cardinality {α : Type} {s : Finset α} : Finset.powerset s | = 2 ^ s.card :=",
+    "difficulty": "beginner"
+  }
+}
